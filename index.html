@@ -1,39 +1,93 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Links para Clientes, Produtos e Vendas</title>
-    <link rel="stylesheet" href="css/styles.css" />
+    <title>Gerenciamento de Produtos</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="pages/clientes.html">Clientes</a></li>
-          <li><a href="pages/produtos.html">Produtos</a></li>
-        </ul>
-      </nav>
-    </header>
+    <h1>Gerenciamento de Produtos</h1>
 
-    <main>
-      <a href="pages/clientes.html">
-        <section id="clientes">
-          <h1>Clientes</h1>
-          <p>Seção destinada à gestão de clientes.</p>
-        </section>
-      </a>
+    <div class="actions">
+      <button onclick="openPopup('addPopup')">Adicionar</button>
+      <button onclick="openPopup('removePopup')">Remover</button>
+      <button onclick="openPopup('updatePopup')">Alterar</button>
+      <button onclick="openPopup('searchPopup')">Procurar</button>
+    </div>
 
-        <a href="pages/produtos.html"></a>
-            <section id="produtos">
-                <h1>Produtos</h1>
-                <p>Seção destinada à gestão de produtos.</p>
-            </section>
-        </a>
-    </main>
-       
-    <footer>
-      <p>&copy; 2024 Minha Empresa. Todos os direitos reservados.</p>
-    </footer>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nome</th>
+          <th>Setor</th>
+          <th>Quantidade</th>
+          <th>Preço</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Conteúdo dinâmico da tabela -->
+      </tbody>
+    </table>
+
+    <!-- Popups -->
+    <div id="addPopup" class="popup">
+      <span class="close" onclick="closePopup('addPopup')">&times;</span>
+      <h3>Adicionar Produto</h3>
+      <form>
+        <label for="addName">Nome:</label>
+        <input type="text" id="addName" required /><br /><br />
+        <label for="addSetor">Setor:</label>
+        <input type="text" id="addSetor" required /><br /><br />
+        <label for="addQuantidade">Quantidade:</label>
+        <input type="number" id="addQuantidade" required /><br /><br />
+        <label for="addPreco">Preço:</label>
+        <input type="number" step="0.01" id="addPreco" required /><br /><br />
+        <button type="submit">Adicionar</button>
+      </form>
+    </div>
+
+    <div id="removePopup" class="popup">
+      <span class="close" onclick="closePopup('removePopup')">&times;</span>
+      <h3>Remover Produto</h3>
+      <form>
+        <label for="removeId">ID do Produto:</label>
+        <input type="text" id="removeId" required /><br /><br />
+        <button type="submit">Remover</button>
+      </form>
+    </div>
+
+    <div id="updatePopup" class="popup">
+      <span class="close" onclick="closePopup('updatePopup')">&times;</span>
+      <h3>Alterar Produto</h3>
+      <form>
+        <label for="updateId">ID do Produto:</label>
+        <input type="text" id="updateId" required /><br /><br />
+        <label for="updateName">Novo Nome:</label>
+        <input type="text" id="updateName" /><br /><br />
+        <label for="updateSetor">Novo Setor:</label>
+        <input type="text" id="updateSetor" /><br /><br />
+        <label for="updateQuantidade">Nova Quantidade:</label>
+        <input type="number" id="updateQuantidade" /><br /><br />
+        <label for="updatePreco">Novo Preço:</label>
+        <input type="number" step="0.01" id="updatePreco" /><br /><br />
+        <button type="submit">Alterar</button>
+      </form>
+    </div>
+
+    <div id="searchPopup" class="popup">
+      <span class="close" onclick="closePopup('searchPopup')">&times;</span>
+      <h3>Procurar Produto</h3>
+      <form>
+        <label for="searchName">Nome do Produto:</label>
+        <input type="text" id="searchName" required /><br /><br />
+        <button type="submit">Procurar</button>
+      </form>
+    </div>
+
+    <div class="overlay" id="overlay" onclick="closeAllPopups()"></div>
+
+    <script src="scripts.js"></script>
   </body>
 </html>

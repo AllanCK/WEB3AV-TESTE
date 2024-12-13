@@ -1,0 +1,32 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #00CACC;
+}
+main{
+    width: 80vw;
+    margin:auto;
+    text-align: center;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav button{
+    font-size: medium;
+    border-width: 0;
+    border-radius: 5px;
+    background-color: #4CAF50;
+}
+nav button:hover{
+    border-width: 2px;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+td{
+    border-bottom:1px solid teal;
+    padding:10px;
+    text-align: left;
+}

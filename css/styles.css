@@ -1,0 +1,48 @@
+/* Centralizar todo o conteúdo da página */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  margin: 0;
+  text-align: center;
+  background-color: #00CACC;
+}
+
+/* Ajustar a imagem */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Estilizar os botões para ficarem lado a lado */
+div {
+  display: flex;
+  gap: 10px; /* Espaçamento entre os botões */
+  margin-top: 20px; /* Espaçamento acima dos botões */
+}
+
+/* Adicionar um estilo para os botões */
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Diminuir o tamanho do parágrafo e mover para cima */
+p {
+  font-size: 14px;  /* Reduzir o tamanho da fonte */
+  margin-top: -10px; /* Mover o parágrafo para cima */
+  max-width: 80%;  /* Opcional: limitar a largura do texto */
+  line-height: 1.6; /* Melhorar a legibilidade do texto */
+}

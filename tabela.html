@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Tabela de produtos</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='/css/tabela.css'>
+    <link rel='stylesheet' type="text/css" media='print' href="/css/print.css">
+</head>
+
+<body>
+    <nav>
+        <h2>TABELA DE PRODUTOS</h2>
+        <div>
+        <button id="btnImprimir">Imprimir</button>
+        <a href="cadastro.html"><button>Novo cadastro</button></a>
+        <a href="index.html"><button>Voltar</button></a>
+        </div> 
+    </nav>
+        <table>
+            <thead>
+                <tr>
+                    <td>Id</td>
+                    <td>Nome</td>
+                    <td>Quantidade</td>
+                    <td>Setor</td>
+                    <td>Valor</td>
+                    <td>Ações</td>
+                </tr>
+            </thead>
+            <tbody id="corpoTabela"></tbody>
+        </table>
+    </main>
+    <script src='js/tabela.js'></script>
+</body>
+
+</html>
